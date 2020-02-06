@@ -85,10 +85,13 @@ public class EmailExtractor extends Thread {
         try {
             URL url = new URL(urlString);
             return new BufferedReader(new InputStreamReader(url.openStream()));
-        } catch (MalformedURLException e) {
-            System.out.println("Could not open url");
-            return null;
+        } catch(IllegalArgumentException e) {
+            System.out.println("Illegal argument " + e.getMessage());
         }
+        catch (MalformedURLException e) {
+            System.out.println("Could not open url " + e.getMessage());
+        }
+        return null;
     }
 
     private Set<String> extractEmail(BufferedReader bufferedReader) throws IOException {
