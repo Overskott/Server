@@ -10,10 +10,10 @@ public class Main {
 	        while(true){
 
 	            new EmailExtractor(serverSocket.accept()).start();
-                //System.out.println("Client connected");
+
 
             }
-        }catch(IOException e) {
+        } catch(IOException e) {
             System.out.println("Server exception: " + e.getMessage());
         }
     }
