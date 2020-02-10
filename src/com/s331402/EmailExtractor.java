@@ -102,7 +102,6 @@ public class EmailExtractor extends Thread {
             for (String email : emailSet) {
                 output.println(email);
             }
-            output.println(3);
         }
     }
 }
