@@ -99,10 +99,11 @@ public class EmailExtractor extends Thread {
         } else {
             output.println(0);
 
+            StringBuilder emails = new StringBuilder();
             for (String email : emailSet) {
-                output.println(email);
+                emails.append(email);
             }
-            output.println(3);
+            output.println(emails.toString());
         }
     }
 }
