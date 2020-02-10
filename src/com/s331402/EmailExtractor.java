@@ -101,7 +101,7 @@ public class EmailExtractor extends Thread {
 
             StringBuilder emails = new StringBuilder();
             for (String email : emailSet) {
-                emails.append(email);
+                emails.append(email).append("\n");
             }
             output.println(emails.toString());
         }
